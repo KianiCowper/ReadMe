@@ -9,10 +9,10 @@ socketio = SocketIO(app)
 
 rooms = {9999}
 
-def generate_unique_code(0000-9999):
+def generate_unique_code():
     while True:
         code = ""
-        for _ in range(0000-9999):
+        for _ in range():
             code += random.choice(ascii_uppercase)
         
         if code not in rooms:
