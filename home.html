@@ -5,17 +5,17 @@
     <label>Display Name:</label>
     <input
       type="text"
-      placeholder="Wassssuuuupppp"
+      placeholder="Wasssuuuuppp"
       name="name"
       value="{{name}}"
     />
   </div>
   <div class="join">
    <label>What's the password?</label>
-   <input type="text" placeholder="pssst, 4 digits please" name="code" value="{{code}}" />
-    <button type="submit" name="join"></button>
+   <input type="text" placeholder="the code" name="code" value="{{code}}" />
+    <button type="submit" name="join">Join</button>
   </div>
-  <button type="submit" name="create" class="create-btn">Join or Create that Group Chat</button>
+  <button type="submit" name="create" class="create-btn">Create that Group Chat</button>
   {% if error %}
   <ul>
     <li>{{error}}</li>
