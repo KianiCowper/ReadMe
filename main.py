@@ -7,12 +7,12 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "hjhjsdahhds"
 socketio = SocketIO(app)
 
-rooms = {}
+rooms = {9999}
 
-def generate_unique_code(length):
+def generate_unique_code(0000-9999):
     while True:
         code = ""
-        for _ in range(length):
+        for _ in range(0000-9999):
             code += random.choice(ascii_uppercase)
         
         if code not in rooms:
@@ -30,10 +30,10 @@ def home():
         create = request.form.get("create", False)
 
         if not name:
-            return render_template("home.html", error="Please enter a name.", code=code, name=name)
+            return render_template("home.html", error="Hey, please add a username!", code=code, name=name)
 
         if join != False and not code:
-            return render_template("home.html", error="Please enter a room code.", code=code, name=name)
+            return render_template("home.html", error="Hey, please add a room code!", code=code, name=name)
         
         room = code
         if create != False:
@@ -83,7 +83,7 @@ def connect(auth):
     join_room(room)
     send({"name": name, "message": "has entered the room"}, to=room)
     rooms[room]["members"] += 1
-    print(f"{name} joined room {room}")
+    print(f"{name} has entered the chat")
 
 @socketio.on("disconnect")
 def disconnect():
