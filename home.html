@@ -1,20 +1,21 @@
 {% extends 'base.html' %} {% block content %}
 <form method="post" class="buttons">
-  <h3>Enter The Chat Room</h3>
+  <h3>ReadMe</h3>
   <div>
-    <label>Name:</label>
+    <label>Display Name:</label>
     <input
       type="text"
-      placeholder="Pick a name!"
+      placeholder="Wassssuuuupppp"
       name="name"
       value="{{name}}"
     />
   </div>
   <div class="join">
-    <input type="text" placeholder="Room Code" name="code" value="{{code}}" />
-    <button type="submit" name="join">Join a Room</button>
+   <label>What's the password?:</label>
+   <input type="text" placeholder="pssst, 4 digits please" name="code" value="{{code}}" />
+    <button type="submit" name="join"></button>
   </div>
-  <button type="submit" name="create" class="create-btn">Create a Room</button>
+  <button type="submit" name="create" class="create-btn">Join or Create that Group Chat</button>
   {% if error %}
   <ul>
     <li>{{error}}</li>
